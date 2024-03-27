@@ -1,0 +1,74 @@
+<h1>My History</h1>
+<div id="accordion">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#my-projects" aria-expanded="true"
+                    aria-controls="my-projects">
+                    My Fundraisers
+                </button>
+            </h2>
+        </div>
+        <div id="my-projects" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            {{#if hasProjects}}
+            <div class="row">
+                {{#each projects}}
+                <div class="col-md-4">
+                    <div class="card-body">
+                        <div class="card">
+                            <div id="card-body">
+                                <h2 class="card-title">{{title}}</h2>
+                                <p class="card-text">${{collected}} raised of ${{pledgeGoal}} goal
+                                    <br>Created {{date}}
+                                </p>
+                                <a href="/projects/{{_id}}" class="btn btn-primary">View details</a>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+            {{else}}
+            <div class="alert alert-warning" role="alert">
+                You don't have any projects!
+            </div>
+            {{/if}}
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#my-donations" aria-expanded="true"
+                    aria-controls="my-donations">
+                    My Donations
+                </button>
+            </h2>
+        </div>
+        <div id="my-donations" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+            {{#if hasDonated}}<div class="row">
+                {{#each donated}}
+                <div class="col-md-4">
+                    <div class="card-body">
+                        <div class="card">
+                            <div id="card-body">
+                                <h2 class="card-title">{{projectTitle}}</h2>
+                                <p class="card-text">{{projectCreator}} started this fundraiser<br>My donation:
+                                    ${{amount}}</p>
+                                <a href="/projects/{{projectId}}" class="btn btn-primary">View details</a>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+            {{else}}
+            <div class="alert alert-warning" role="alert">
+                You didn't make any donations!
+            </div>
+            {{/if}}
+        </div>
+    </div>
+</div>
+<a class="back-button" href="/projects">Back to All Projects</a>

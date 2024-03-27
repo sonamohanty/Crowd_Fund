@@ -1,0 +1,67 @@
+{{#if user}}
+<div>
+    <p>Hello, {{user.firstName}}!</p>
+</div>
+{{/if}}
+<div id="accordion">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#recent-projects" aria-expanded="true"
+                    aria-controls="recent-projects">
+                    Recent Fundraisers
+                </button>
+            </h2>
+        </div>
+        <div id="recent-projects" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="row">
+                {{#each projectsByCreationDate}}
+                <div class="col-md-4">
+                    <div class="card-body">
+                        <div class="card" style="width: 18rem;">
+                            <div id="card-body">
+                                <h3 class="card-title">{{title}}</h3>
+                                <p class="card-text"><span id="project-location">{{location}}</span>
+                                    <br>Started by {{creator}}<br />Created {{date}}<br>
+                                </p>
+                                <a href="/projects/{{_id}}" class="btn btn-primary">View details</a>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#trending-projects"
+                    aria-expanded="false" aria-controls="trending-projects">
+                    Trending Fundraisers
+                </button>
+            </h2>
+        </div>
+        <div id="trending-projects" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="row">
+                {{#each projectsByCollectedAmount}}
+                <div class="col-md-4">
+                    <div class="card-body">
+                        <div class="card" style="width: 18rem;">
+                            <div id="card-body">
+                                <h3 class="card-title">{{title}}</h3>
+                                <p class="card-text"><span id="project-location">{{location}}</span><br>
+                                    Started by {{creator}}<br />${{collected}} raised of ${{pledgeGoal}} goal
+                                </p>
+                                <a href="/projects/{{_id}}" class="btn btn-primary">View details</a>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>

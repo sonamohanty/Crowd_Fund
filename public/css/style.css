@@ -1,0 +1,245 @@
+body {
+    background-color: #e9ecef;
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.div-box1 {
+    border: solid 1px red;
+    max-width: 720px;
+    height: 350px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    padding: 80px 80px 80px 200px;
+    background-color: white;
+
+
+}
+
+.para {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.col-sm-12 img {
+    height: 40px;
+    width: 40px;
+}
+
+.heading {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(35, 35, 101);
+}
+
+ul.error-list {
+    list-style-type: square;
+}
+
+.div-box2 {
+    border: solid 1px red;
+    max-width: 720px;
+    height: 740px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    padding: 80px 80px 80px 200px;
+    background-color: white;
+    margin-top: 100px;
+    overflow: auto;
+}
+
+.common-label {
+    color: black;
+}
+
+.common-div {
+    margin-right: 110px;
+
+
+}
+
+.form-div {
+    margin-bottom: 60px;
+    margin-left: -110px;
+    padding-left: 100px;
+    border-radius: 10px;
+    padding-top: 30px;
+    background-color: #0073ee69;
+}
+
+.div-box3 {
+    border: solid 1px red;
+    max-width: 720px;
+    height: 620px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    padding: 80px 80px 80px 200px;
+    background-color: white;
+    overflow: auto;
+    margin-top: 20px;
+}
+
+.head-div {
+    width: 100%;
+    top: 0;
+    text-align: center;
+    margin-top: -50px;
+    margin-left: -80px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    font-family: 'Bangers', cursive;
+    color: #f00c0c;
+    background-color: #f8e4056f;
+}
+
+.div-text {
+    color: black;
+
+}
+
+article p {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.link-styles {
+    font-family: 'Fredoka One', cursive;
+    color: black;
+}
+
+.link-style {
+    color: black;
+}
+
+.project-center {
+    text-align: center;
+}
+
+.right {
+    float: right;
+    width: 300px;
+    border: 1px solid #73AD21;
+    padding: 10px;
+    margin-top: -350px;
+    height: 210px;
+    position: fixed;
+    bottom: 90px;
+    right: 80px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+ul.unordered-main {
+    list-style-type: none;
+    font-weight: 900;
+    color: black;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px 5px 0px 0px;
+    overflow: hidden;
+    background-color: #045038c3;
+}
+
+ul.unordered-main li {
+    float: left;
+}
+
+
+#signin-form {
+    background-color: #0073ee69;
+    margin-left: -150px;
+    margin-top: -30px;
+    padding: 20px 50px 20px 50px;
+
+}
+
+
+ul.unordered-main li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    margin-left: 50px;
+    text-decoration: none;
+}
+
+ul.unordered-main li a:hover {
+    background-color: #111;
+    color: aqua;
+}
+
+ul.unordered-main li a:active {
+    height: -2%;
+    width: -2%;
+    font-size: 14px;
+}
+
+#is-project-active {
+    color: red;
+}
+
+#donation-successful {
+    color: #73AD21;
+}
+
+#register-button {
+    background-color: #ffffff;
+    color: #0072ee;
+}
+
+.back-button {
+    background-color: #62f26e;
+    color: #0072ee;
+    border-radius: 3px;
+}
+
+.back-button:active {
+    height: 90%;
+    width: 90%;
+    color: red;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+#project-location {
+    color: green;
+}
+
+#card-body {
+    background-color: #0073ee69;
+    color: #000000;
+    padding: 20px;
+
+}
+
+
+
+.card {
+    background-color: #0073ee10;
+
+}
+
+.search-form {
+    background-color: #0073ee69;
+    margin-left: -150px;
+    margin-top: -30px;
+    padding: 20px 50px 20px 50px;
+    border-radius: 5px;
+
+}
+
+.btn-primary:hover {
+    background-color: #f00c0c51;
+    color: black;
+    height: -2%;
+    width: -2%;
+}

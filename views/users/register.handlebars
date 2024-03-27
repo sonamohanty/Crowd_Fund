@@ -1,0 +1,88 @@
+<div class="row">
+    <div class="col-sm-12 div-box2">
+        <div class="head-div">
+            <h2>Register page</h2>
+        </div>
+        <div class="form-div">
+            <form action="/users" method="POST" id="register-form">
+                <div class="form-group common-div">
+                    <label for="first_name" class="common-label"> First Name</label>
+                    <input type="text" name="first_name" id="first_name" class="full-width-input form-control"
+                        placeholder="First Name" value="{{user.first_name}}">
+                    <div id="no-first-name" class="div-text" hidden>Please enter your first name</div>
+                </div>
+                <div class="form-group common-div">
+                    <label for="last_name" class="common-label">Last Name:</label>
+                    <input type="text" name="last_name" id="last_name" value="{{user.last_name}}"
+                        placeholder="Last Name" class="full-width-input form-control">
+                    <div id="no-last-name" class="div-text" hidden>Please enter your last name</div>
+                </div>
+
+                <div class="form-group common-div">
+                    <label for="email" class="common-label">Email:</label>
+                    <input type="email" name="email" id="email" value="{{user.email}}"
+                        class="full-width-input form-control" placeholder="Enter email">
+                    <div id="no-email" class="div-text" hidden>Please enter your email</div>
+                    <div id="invalid-email" class="div-text" hidden>Invalid email</div>
+                </div>
+                <div class="form-group common-div">
+                    <label for="password" class="common-label">Password:</label>
+                    <input type="password" name="password" id="password" class="full-width-input form-control"
+                        value="{{user.password}}" placeholder="password">
+                    <div id="no-password" class="div-text" hidden>Please enter your password </div>
+                    <div id="password-short" class="div-text" hidden>Password should contain at least 8 characters</div>
+                </div>
+                <div class="form-group common-div">
+                    <label for="password_confirm" class="common-label">Confirm Password:</label>
+                    <input type="password" name="password_confirm" id="password_confirm"
+                        class="form-control full-width-input" value="{{user.password_confirm}}"
+                        placeholder="Confirm password">
+                    <div id="no-password-confirmation" class="div-text" hidden>Please enter your password
+                        confirmation</div>
+                    <div id="passwords-mismatch" class="div-text" hidden>Passwords don't match</div>
+                </div>
+                <div class="form-group common-div">
+                    <label for="city" class="common-label">City:</label>
+                    <input type="text" name="city" id="city" value="{{user.city}}" class="full-width-input form-control"
+                        placeholder="City">
+                    <div id="no-city" class="div-text" hidden>Please enter your city</div>
+                </div>
+                <div class="form-group common-div">
+                    <label for="state" class="common-label">State:</label>
+                    <select name="state" id="state">
+                        <option value="" selected="selected">Select a State</option>
+                        <option value="AL">Ahmedabad</option>
+                        <option value="AK">Amreli</option>
+                        <option value="AZ">Banaskantha</option>
+                        <option value="AR">Bharuch</option>
+                        <option value="CA">Bhavnagar</option>
+                        <option value="CO">Dang</option>
+                        <option value="CT">Jamnagar</option>
+                        <option value="DE">Junagadh</option>
+                        <option value="DC">Kheda</option>
+                        <option value="FL">Kachchh</option>
+                        <option value="GA">Mehsana</option>
+                        <option value="HI">Panchmahal</option>
+                        <option value="ID">Rajkot</option>
+                        <option value="IL">Sabarkantha</option>
+                        <option value="IN">Surat</option>
+                        <option value="IA">Surendranagar</option>
+                        <option value="KS">Vadodara</option>
+
+                    </select>
+                    <div id="no-state" class="div-text" hidden>Please select your state</div>
+                </div>
+                <button type="submit" class="btn btn-success">Create An Account</button>
+            </form>
+        </div>
+    </div>
+    {{#if hasErrors}}
+    <ul class="error-list">
+        {{#each errors}}
+        <li>
+            {{this}}
+        </li>
+        {{/each}}
+    </ul>
+    {{/if}}
+</div>
